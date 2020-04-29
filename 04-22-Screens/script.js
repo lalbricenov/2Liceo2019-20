@@ -15,3 +15,15 @@ let mostrar = function (id) {
 };
 
 mostrar("menu");
+let prueba = function () {
+  console.log("Boton clickeado!!!");
+};
+
+let botonesAdd = document.getElementsByClassName("irAAdd");
+for (boton of botonesAdd) {
+  // onclick necesita la referencia a una función, no
+  // el resultado de evaluar una función
+  // ARROW FUNCTIONS ()=>{aksj}, funciones anónimas
+  boton.onclick = () => mostrar("add");
+  // boton.onmouseover = () => mostrar("lista");
+}
