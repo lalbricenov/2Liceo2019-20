@@ -1,4 +1,4 @@
-let pantallas = ["menu", "add", "lista", "login"];
+let pantallas = ["menu", "add", "lista"];
 // Función que muestra una pantalla y oculta las demás
 let mostrar = function (id) {
   //Abstracción
@@ -13,10 +13,7 @@ let mostrar = function (id) {
   //   return
 };
 
-mostrar("login");
-let prueba = function () {
-  console.log("Boton clickeado!!!");
-};
+mostrar("menu");
 
 let botonesAdd = document.getElementsByClassName("irAAdd");
 for (boton of botonesAdd) {
