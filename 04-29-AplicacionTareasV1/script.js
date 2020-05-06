@@ -1,4 +1,4 @@
-let pantallas = ["menu", "add", "lista"];
+let pantallas = ["login", "menu", "add", "lista"];
 // Función que muestra una pantalla y oculta las demás
 let mostrar = function (id) {
   //Abstracción
@@ -13,7 +13,7 @@ let mostrar = function (id) {
   //   return
 };
 
-mostrar("menu");
+mostrar("login");
 
 let botonesAdd = document.getElementsByClassName("irAAdd");
 for (boton of botonesAdd) {
@@ -23,3 +23,16 @@ for (boton of botonesAdd) {
   boton.onclick = () => mostrar("add");
   // boton.onmouseover = () => mostrar("lista");
 }
+
+let usuarios = [
+  { nombre: "Luis", clave: "clave1234" },
+  { nombre: "Juan", clave: "abcd.1234" },
+  { nombre: "Maria", clave: "miClave" },
+];
+
+let iniciarSesion = function () {
+  console.log("Intento de inicio de sesion");
+  return 0;
+};
+let botonInicioSesion = document.getElementById("inicioSesion");
+boton.onclick = iniciarSesion;
