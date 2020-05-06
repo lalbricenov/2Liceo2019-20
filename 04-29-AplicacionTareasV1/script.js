@@ -29,10 +29,24 @@ let usuarios = [
   { nombre: "Juan", clave: "abcd.1234" },
   { nombre: "Maria", clave: "miClave" },
 ];
-
+let USUARIO;
 let iniciarSesion = function () {
   console.log("Intento de inicio de sesion");
-  return 0;
+  let nombreIntento = document.getElementById("nombre").value;
+  let claveIntento = document.getElementById("password").value;
+  console.log(nombreIntento);
+  console.log(claveIntento);
+  for (usuario of usuarios) {
+    if (usuario.nombre == nombreIntento && usuario.clave == claveIntento) {
+      //Inicio de sesion exitoso
+      USUARIO = usuario.nombre;
+      mostrar("menu");
+      return false;
+    }
+  }
+  // Si se llega a este punto, quiere decir que el inicio de sesion no fue exitoso
+  alert("Nombre de usuario o contraseña equivocados");
+  return false;
 };
-let botonInicioSesion = document.getElementById("inicioSesion");
-boton.onclick = iniciarSesion;
+let formaInicioSesion = document.getElementById("formaInicioSesion");
+formaInicioSesion.onsubmit = iniciarSesion;
