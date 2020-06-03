@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      #calculadora {
+        display: grid;
+        /* width: 400px; */
+        grid-template-columns: repeat(4, 89px);
+        grid-template-rows: repeat(5, 44px);
+      }
+      .boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4px;
+        border-radius: 4px;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .numero {
+        background-color: #f1f3f4;
+        color: #202124;
+        border: 1px solid #f1f3f4;
+      }
+      .numero:hover {
+        background-color: #e8eaeb;
+        border: 1px solid #e8eaeb;
+      }
+      .operador {
+        background-color: #dfe1e5;
+        color: #202124;
+        border: 1px solid #dfe1e5;
+        font-size: 18px;
+      }
+      .operador:hover,
+      .operador-secundario:hover {
+        background-color: #d7d9dd;
+        border: 1px solid #d7d9dd;
+      }
+      .igual {
+        background-color: #4285f4;
+        color: #fff;
+        border: 1px solid #4285f4;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .igual:hover {
+        background-color: #4d8bf1;
+        border: 1px solid #4d8bf1;
+      }
+      .operador-secundario {
+        background-color: #dfe1e5;
+        color: #202124;
+        border: 1px solid #dfe1e5;
+        font-size: 13px;
+      }
+      #btnDot {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculadora">
+      <div id="btnOpening" class="boton operador-secundario">(</div>
+      <div id="btnClosing" class="boton operador-secundario">)</div>
+      <div id="btnPercent" class="boton operador-secundario">%</div>
+      <div id="btnAC" class="boton operador-secundario">AC</div>
+      <div id="btn7" class="boton numero">7</div>
+      <div id="btn8" class="boton numero">8</div>
+      <div id="btn9" class="boton numero">9</div>
+      <div id="btnDivided" class="boton operador">÷</div>
+      <div id="btn4" class="boton numero">4</div>
+      <div id="btn5" class="boton numero">5</div>
+      <div id="btn6" class="boton numero">6</div>
+      <div id="btnTimes" class="boton operador">×</div>
+      <div id="btn1" class="boton numero">1</div>
+      <div id="btn2" class="boton numero">2</div>
+      <div id="btn3" class="boton numero">3</div>
+      <div id="btnMinus" class="boton operador">-</div>
+      <div id="btn0" class="boton numero">0</div>
+      <div id="btnDot" class="boton numero">.</div>
+      <div id="btnIgual" class="boton igual">=</div>
+      <div id="btnPlus" class="boton operador">+</div>
+    </div>
+  </body>
+</html>
